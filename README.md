@@ -7,5 +7,5 @@ bibliothèques, bdds
 postgres, mysql
 
 d'ici vendredi prochain : 
-- formé sur react et avoir fini l'architecture pour commencer le projet
+- formé sur react, jango et avoir fini l'architecture pour commencer le projet
 python3 -m venv venv
