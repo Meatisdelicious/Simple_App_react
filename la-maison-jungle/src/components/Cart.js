@@ -1,3 +1,5 @@
+import '../styles/Banner.css'
+
 function Cart() {
     const monsteraPrice = 8
     const ivyPrice = 10
@@ -5,7 +7,7 @@ function Cart() {
     return (<div>
                     <h2>Panier</h2>
                     <ul>
-                    <li>Monstera : {monsteraPrice}€</li>
+                        <li>Monstera : {monsteraPrice}€</li>
                         <li>Lierre : {ivyPrice}€</li>
                         <li>Fleurs : {flowerPrice}€</li>
                     </ul>
