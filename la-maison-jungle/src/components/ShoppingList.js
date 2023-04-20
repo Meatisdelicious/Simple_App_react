@@ -13,3 +13,5 @@ function ShoppingList() {
         </ul>
     )
 }
+
+export default ShoppingList
