@@ -1,9 +1,13 @@
 import Banner from './Banner'
-import Cart from '.Cart'
+import Cart from './Cart'
 
 function App() {
-  return <Banner />
-  return <Cart />
+  return (
+    <div>
+      <Banner />
+      <Cart/>
+    </div>
+  )
 }
 
 export default App;
