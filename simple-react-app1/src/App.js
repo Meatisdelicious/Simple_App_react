@@ -1,5 +1,5 @@
 import './App.css';
-
+import {useState} from 'react';
 
 const Person = (props) =>  {
   return (
@@ -14,8 +14,9 @@ const Person = (props) =>  {
 const App = () => {
   return (
     <div className="App">
-      <Person name={'John'} lastName={'Smith'} age={'24'} />
-      <Person name={'Ana'} age={20 + 2} />
+      <button>-</button>
+      <h1>0</h1>
+      <button>+</button>
     </div>
   );
 }
