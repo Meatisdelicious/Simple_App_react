@@ -1,13 +1,23 @@
 import './App.css';
 
-const App = () => {
-  const name = 'john Smith'
 
+const Person = () =>  {
+  return (
+    <>
+    <h1>Name: John</h1>
+    <h2>Last Name: Doe</h2>
+    <h2>Age: 30</h2>
+    </>
+  )
+}
+
+const App = () => {
   return (
     <div className="App">
-      <h1> Hello , {name} !!</h1>
+      <Person />
+      <Person />
+      <Person />
     </div>
   );
 }
-
 export default App;
