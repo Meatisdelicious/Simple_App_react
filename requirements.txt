@@ -1,2 +1,2 @@
 # requirements for both projects
-# you will need to install node.js for the react project
+# you will need to install node.js for the react proj
