@@ -15,7 +15,10 @@ const movie1 = {
 };
 
 const App = () => {
+  // to display the entire list of movies
   const [movies, setMovies] = useState([]);
+  // to make the search work
+  const [searchTerm, setSearchTerm] = useState("");
 
   const searchMovies = async (title) => {
     // to get a response from the API
@@ -23,7 +26,8 @@ const App = () => {
     // To get the data from the response
     const data = await response.json();
 
-    console.log("Data from APi--", data.Search);
+    // console.log("Data from APi--", data.Search);
+    setMovies(data.Search);
   };
 
   useEffect(() => {
@@ -36,12 +40,16 @@ const App = () => {
       <div className="search">
         <input
           placeholder="Search  for movies"
-          value="Superman"
-          onChange={() => {}}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <img src={SearchIcon} alt="search" onClick={() => {}} />
+        <img
+          src={SearchIcon}
+          alt="search"
+          onClick={() => searchMovies(searchTerm)}
+        />
       </div>
-      {movies?.lenght > 0 ? (
+      {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
             <MovieCard movie={movie} />
