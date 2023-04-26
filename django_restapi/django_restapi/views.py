@@ -27,15 +27,16 @@ def drink_list(request):
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def drink_detail(request, id):
-
     # Cheking if it's a valid request
     try:
-        Drink.objects.get(pk=id)
+        drink = Drink.objects.get(pk=id)
     except Drink.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
+
     if request.method == 'GET':
-        pass
-    elif request.method == 'POST':
+        serializer = DrinkSerializer(drink)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
         pass
     elif request.method == 'DELETE':
         pass
