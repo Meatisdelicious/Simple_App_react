@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django_restapi import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # To say what URL hits this views (file) ( pretty much the path of the url )
+    path('drinks/', views.drink_list)
 ]
