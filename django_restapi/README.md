@@ -15,3 +15,9 @@ You can then try the following urls :
 
 It will show you the json returned.
 -->
+
+<!-- Usefull commands : -->
+
+python manage.py runserver
+
+django-admin startproject mysite
