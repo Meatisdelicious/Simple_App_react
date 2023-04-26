@@ -19,6 +19,7 @@ def drink_list(request):
         return JsonResponse({"drinks": serializer.data})
 
     if request.method == 'POST':
+        # process to get data from client to server
         serializer = DrinkSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -34,10 +35,16 @@ def drink_detail(request, id):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
+        # process to get data from server to client
         serializer = DrinkSerializer(drink)
         return Response(serializer.data)
     elif request.method == 'PUT':
-        pass
+        # process for updating data
+        serializer = DrinkSerializer(drink, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
         pass
     return
