@@ -8,7 +8,7 @@ from rest_framework import status
 
 # something you put above a function to describe it in some way
 @api_view(['GET', 'POST'])
-def drink_list(request):
+def drink_list(request, format=None):
 
     if request.method == 'GET':
         # get all the drinks from class Drink
@@ -27,7 +27,7 @@ def drink_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def drink_detail(request, id):
+def drink_detail(request, id, format=None):
     # Cheking if it's a valid request
     try:
         drink = Drink.objects.get(pk=id)
@@ -46,5 +46,6 @@ def drink_detail(request, id):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
-        pass
+        drink.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
     return
