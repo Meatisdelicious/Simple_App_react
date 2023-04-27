@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+// Tout le font end, de façon à display la page de base principale
+
 const todoItems = [
   {
     id: 1,
