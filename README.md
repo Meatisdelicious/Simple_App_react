@@ -10,4 +10,8 @@
 
 ## Django Rest FrameWork. Building an API from scratch
 
-       *
+       * Building a simple CRUD API
+
+## Simple Todo app with React and Jango
+
+       * Todo app.
