@@ -23,19 +23,19 @@ npm start
 
 <!-- Usefull commands : -->
 
-- To run a server :
+- run a server :
 
 ```code
 python manage.py runserver
 ```
 
-- to start a project
+- start a project
 
 ```code
 django-admin startproject mysite
 ```
 
-- to create a react app
+- create a react app
 
 ```code
 npx create-react-app frontend
